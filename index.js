@@ -1,5 +1,6 @@
 const commander = require('commander');
 const program = new commander.Command();
+program.version('1.0.0');
 
 program
   .option('-a, --add [type]', 'Add a directory.');
