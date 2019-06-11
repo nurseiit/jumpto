@@ -45,7 +45,8 @@ const all = readAliases();
 
 if (all[alias] === undefined) {
   console.log(`Cannot find alias for "${alias}"!`);
-  process.exit(1);
+  process.exit(0);
 }
 
 console.log(all[alias]);
+process.exit(1);

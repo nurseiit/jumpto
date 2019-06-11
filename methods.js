@@ -42,6 +42,7 @@ const listAliases = () => {
   Object.keys(all).forEach((key) => {
     console.log(`  ${key} => ${all[key]}`);
   });
+  process.exit(0);
 };
 
 const removeAlias = (alias) => {
