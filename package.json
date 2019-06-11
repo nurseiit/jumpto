@@ -1,0 +1,28 @@
+{
+  "name": "jumpto",
+  "version": "1.0.0",
+  "description": "Utility to bookmark and jump through local directories.",
+  "main": "index.js",
+  "bin": {
+    "jumpto": "./bin/jumpto"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurseiit/jumpto.git"
+  },
+  "author": {
+    "name": "Nurseiit Abdimomyn",
+    "email": "nurs@unist.ac.kr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nurseiit/jumpto/issues"
+  },
+  "homepage": "https://github.com/nurseiit/jumpto",
+  "dependencies": {
+    "commander": "^2.20.0"
+  }
+}
