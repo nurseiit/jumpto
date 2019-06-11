@@ -1,6 +1,6 @@
 {
   "name": "jumpto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility to bookmark and jump through local directories.",
   "main": "index.js",
   "bin": {
