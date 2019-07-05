@@ -1,12 +1,18 @@
 const commander = require('commander');
 const program = new commander.Command();
 
-const { readAliases, addDirectory, listAliases, removeAlias } = require('./methods');
+const { init, readAliases, addDirectory, listAliases, removeAlias } = require('./methods');
 
 program
   .version('1.0.1')
   .description('Utility to bookmark and jump through local directories.')
   .usage('[alias] or [command] [options]');
+
+program
+  .command('init')
+  .description('initialize the utility')
+  .action(init);
+
 
 program
   .command('add [directory] [alias]')
@@ -31,7 +37,13 @@ program.on('--help', () => {
   console.log('  $ jumpto remove myBin');
 });
 
-program.parse(process.argv);
+if (process.argv.length < 3){
+  let argv = process.argv;
+  argv.push('--help');
+  program.parse(argv);
+} else {
+  program.parse(process.argv);
+}
 
 if (program.list !== undefined) {
   listAliases();
@@ -47,6 +59,6 @@ if (all[alias] === undefined) {
   console.log(`Cannot find alias for "${alias}"!`);
   process.exit(0);
 }
-
+// Need to jump to `all[alias]` – bash wrapper will take care of that.
 console.log(all[alias]);
 process.exit(1);

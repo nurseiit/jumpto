@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 const homeDir = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
 const configFile = homeDir + '/.jumpto';
@@ -23,10 +24,17 @@ const readAliases = () => {
 };
 
 const addDirectory = (directory, alias) => {
-  console.log(`Mapping "${directory}" to an alias "${alias}".`);
+  if (alias == undefined) {
+    if (directory == undefined)
+      process.stdout.write('[directory] and ');
+    console.log('[alias] cannot be empty!');
+    process.exit(0);
+  }
+  const absoluteDir = path.resolve(directory);
+  console.log(`Mapping "${absoluteDir}" to an alias "${alias}".`);
   
   let all = readAliases();
-  all[alias] = directory;
+  all[alias] = absoluteDir;
 
   saveAliases(all);
   process.exit(0);
@@ -50,11 +58,18 @@ const removeAlias = (alias) => {
   if (all[alias] !== undefined) {
     delete all[alias];
     saveAliases(all);
-    console.log(`Removed an alias "${alias}."`);
+    console.log(`Removed an alias "${alias}".`);
   } else {
     console.log(`Cannot find an alias "${alias}"!`);
   }
   process.exit(0);
 };
 
-module.exports = { readAliases, addDirectory, listAliases, removeAlias };
+const init = () => {
+  const filePath = path.resolve(__dirname, './bin/_init');
+  const raw = fs.readFileSync(filePath, 'utf8');
+  console.log(raw);
+  process.exit(0);
+};
+
+module.exports = { init, readAliases, addDirectory, listAliases, removeAlias };

@@ -1,14 +1,2 @@
-#!/bin/bash
-jumpto () {
-  __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-  JUMPOUT=`${__dir}/jumpout "$@"`
-
-  if [ $? -eq 1 ]
-  then
-    echo "Jumping to ${JUMPOUT}.";
-    cd ${JUMPOUT}
-  else
-    echo "${JUMPOUT}"
-  fi
-}
+#!/usr/bin/env node
+require('../index.js');

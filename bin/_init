@@ -1,0 +1,12 @@
+# Bash Wrapper
+jumpto () {
+  JUMPOUT=`command jumpto "$@"`
+
+  if [ $? -eq 1 ]
+  then
+    echo "Jumping to '${JUMPOUT}.'";
+    cd ${JUMPOUT}
+  else
+    echo "${JUMPOUT}"
+  fi
+}
