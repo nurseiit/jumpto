@@ -4,7 +4,7 @@ const program = new commander.Command();
 const { init, readAliases, addDirectory, listAliases, removeAlias } = require('./methods');
 
 program
-  .version('1.0.1')
+  .version('1.1.0')
   .description('Utility to bookmark and jump through local directories.')
   .usage('[alias] or [command] [options]');
 
