@@ -1,6 +1,6 @@
 # jumpto
 
-Utility to bookmark and jump through local directories.
+🏀 One line setup utility to bookmark and jump through local directories.
 
 ## Installation
 
