@@ -5,20 +5,21 @@ Utility to bookmark and jump through local directories.
 ## Installation
 
 ```
-$ npm install -g jumpto
+$ yarn global add jumpto
+$ jumpto init >> ~/.[SHELL]  # replace [SHELL] with your shell's config filename. i.e 'zshrc', 'bashrc'
 ```
 
 ## Usage
 
 ```
-$ jumpto -h
+$ jumpto --help
 ```
 
 ## Local Development
 
 ```
 $ git clone git@github.com:nurseiit/jumpto.git && cd jumpto
-$ npm install
+$ yarn install
 ```
 
 ## License
