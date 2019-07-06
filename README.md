@@ -1,5 +1,9 @@
 # jumpto
 
+[![npm version](http://img.shields.io/npm/v/jumpto.svg?style=flat)](https://npmjs.org/package/jumpto "View this project on npm")
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
+
 🏀 One line setup utility to bookmark and jump through local directories.
 
 ## Installation
@@ -42,6 +46,19 @@ $ git clone git@github.com:nurseiit/jumpto.git && cd jumpto
 $ yarn install
 ```
 
-## License
+## Support
 
-jumpto uses the MIT license.
+__Bugs and requests__: submit them through the project's issues tracker.<br>
+[![Issues](http://img.shields.io/github/issues/nurseiit/jumpto.svg)]( https://github.com/nurseiit/jumpto/issues )
+
+## Acknowledgements
+
+**jumpto** © 2019+, Nurseiit. Released under the [MIT] License.<br>
+Authored and maintained by Nurseiit with help from contributors ([list][contributors]).
+
+> [devnur.me](https://devnur.me) &nbsp;&middot;&nbsp;
+> GitHub [@nurseiit](https://github.com/nurseiit) &nbsp;&middot;&nbsp;
+> Twitter [@anurseiit](https://twitter.com/anurseiit)
+
+[MIT]: http://mit-license.org/
+[contributors]: http://github.com/nurseiit/jumpto/contributors
