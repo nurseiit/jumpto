@@ -13,6 +13,26 @@ $ jumpto init >> ~/.[SHELL]  # replace [SHELL] with your shell's config filename
 
 ```
 $ jumpto --help
+
+Usage: jumpto [alias] or [command] [options]
+
+Utility to bookmark and jump through local directories.
+
+Options:
+  -V, --version              output the version number
+  -l, --list                 List all aliases
+  -h, --help                 output usage information
+
+Commands:
+  init                       initialize the utility
+  add|a [directory] [alias]  add a directory to map an alias
+  remove|r [alias]           remove an existing alias to directory
+
+Examples:
+  $ jumpto add ../bin myBin
+  $ jumpto myBin
+  $ jumpto remove myBin
+
 ```
 
 ## Local Development
